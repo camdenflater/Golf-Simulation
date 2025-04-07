@@ -11,9 +11,6 @@ if __name__ == "__main__":
 
     for hole, (par, distance) in gc.course_yardages.items():
 
-        # Ensure each golfer has an empty scorecard for each hole
-        # golfer_strokes = {golfer: (1, 0) for golfer in golfer_strokes}
-
         for golfer in golfer_strokes:
 
             stroke, yards = golfer_strokes[golfer]
@@ -36,8 +33,6 @@ if __name__ == "__main__":
                     "Yards_To_Pin":yards,
                     "Pin_Distance":distance,
                     "Club":club}).encode('utf-8')
-                # gk.send_message_to_topic(message, f"scorecard_{golfer.lower()}")
-                print(message)
-
+                gk.send_message_to_topic(message, f"scorecard_{golfer.lower()}")
                 stroke += 1
 

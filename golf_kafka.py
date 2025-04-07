@@ -23,39 +23,3 @@ def send_message_to_topic(message, topic):
     producer.send(topic, value=message)
     producer.flush()
     print('Sent ', message)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# CONSUMER = KafkaConsumer(
-#     'camden_topic',
-#     bootstrap_servers=[ip_address],
-#     auto_offset_reset='earliest')
-
-# [print(f"Received message: {m.value}") for m in CONSUMER]
-
-# CONSUMER.close()
-# print("Consumer closed")

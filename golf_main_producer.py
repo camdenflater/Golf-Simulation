@@ -1,6 +1,6 @@
 import random
-import golf_config as gc
-import golf_kafka as gk
+import golf_config_producer as gc
+import golf_kafka_producer as gk
 import uuid
 import json
 
